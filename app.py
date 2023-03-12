@@ -20,13 +20,13 @@ def home():
 def get_embed():
     wav_file64= request.json['wav']
     embed64 = model.get_embed(wav_file64) #base64
-    ex_syn = model.get_ex_syn(embed64)
+    # ex_syn = model.get_ex_syn(embed64)
     embed64_tostr = embed64.decode('utf8').replace("'", '"')
-    syn_tostr = ex_syn.decode('utf8').replace("'", '"')
+    # syn_tostr = ex_syn.decode('utf8').replace("'", '"')
     
     jsonstr = {
         'embed': embed64_tostr,
-        'ex_synthesize_voice' : syn_tostr
+        # 'ex_synthesize_voice' : syn_tostr
         
     } 
    
